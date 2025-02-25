@@ -9,7 +9,7 @@ export default function (plop) {
   ▐█▄▄▌ ███ ▐█▌.▐▌▐█▌▐▌ ███ ▐█▄▄▌██. ██ 
   ▀▀▀ . ▀   ▀█▄▀▪.▀▀▀ . ▀   ▀▀▀ ▀▀▀▀▀• 
 
-  What are you going to create?
+  What are we creating today?
   `)
 
   // plop.setGenerator('application', applicationFactory(plop))

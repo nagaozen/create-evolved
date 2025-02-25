@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 Plop.prepare({
   cwd: argv.cwd,
-  configPath: path.join(__dirname, 'plopfile.js'),
+  configPath: path.join(__dirname, 'plopfile.mjs'),
   preload: argv.preload || [],
   completion: argv.completion
 }, env => Plop.execute(env, run))
