@@ -33,10 +33,12 @@ Navigate to your `directory` and run the usual commands (`pnpm i`, `dotnet resto
 
 # Supported Templates
 
+> **IMPORTANT:** When creating templates, one MUST follow our golden rule: use the most compatible syntax/runtime for services and the latest syntax/LTS for drivers. -- nagaozen
+
 * **.NET Services (netstandard2.0)**  
 Opinionated C# service solution with clean-code architecture.
 
-* **.NET WebAPI (netstandard2.0)**  
+* **.NET WebAPI (net8.0)**  
 Opinionated C# minimal api solution.
 
 # Contributing
