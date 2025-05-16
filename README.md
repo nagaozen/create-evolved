@@ -41,6 +41,9 @@ Opinionated C# service solution with clean-code architecture.
 * **.NET WebAPI (net8.0)**  
 Opinionated C# minimal api solution.
 
+* **.NET Console (net8.0)**  
+Opinionated C# console solution.
+
 # Contributing
 
 We welcome contributions! Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
