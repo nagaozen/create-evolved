@@ -30,6 +30,10 @@ function factory (plop) {
 
         const opts = { stdio: 'inherit', cwd: dir }
 
+        // Create .gitignore and .editorconfig
+        execSync('dotnet new gitignore', opts)
+        execSync('dotnet new editorconfig', opts)
+
         // Create solution
         execSync(`dotnet new sln --name ${svc}`, opts)
 
