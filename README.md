@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/nagaozen/create-evolved/master/hero.png?raw=true" alt="create-evolved hero image" width="512" />
+  <img src="https://github.com/nagaozen/create-evolved/blob/88160f7f30e9069402f5150a17c272b05edb65e2/hero.png" alt="create-evolved hero image" width="512" />
 </p>
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-f7df1e.svg?style=for-the-badge&logo=standardjs)](https://standardjs.com)
