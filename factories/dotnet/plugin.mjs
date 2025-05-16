@@ -4,12 +4,12 @@ import { execSync } from 'node:child_process'
 
 function factory (plop) {
   const interview = {
-    description: '.NET C# console app',
+    description: '.NET C# open-for-extension plug-in',
     prompts: [
       {
         type: 'input',
-        name: 'svc',
-        message: 'Service Name:'
+        name: 'plg',
+        message: 'Plug-in Name:'
       },
       {
         type: 'input',
@@ -20,7 +20,7 @@ function factory (plop) {
     ],
     actions: [
       function scaffoldSolutionAndProjects (answers) {
-        const { svc } = answers
+        const { plg } = answers
         const dir = path.resolve(process.cwd(), answers.dir)
 
         // Ensure target directory exists
@@ -34,25 +34,25 @@ function factory (plop) {
         execSync('dotnet new editorconfig', opts)
 
         // Create solution
-        execSync(`dotnet new sln --name ${svc}.CLIApp`, opts)
+        execSync(`dotnet new sln --name ${plg}`, opts)
 
-        // Create console project
-        execSync('dotnet new console -n Console -o Console', opts)
+        // Create plugin class libraries
+        execSync('dotnet new classlib -n Plugin -o Plugin', opts)
 
-        // Add project to the solution
-        execSync('dotnet sln add Console/Console.csproj', opts)
+        // Add project projects to the solution
+        execSync('dotnet sln add Plugin/Plugin.csproj', opts)
 
         // Add NuGet dependencies
         const packagesMap = [
-          { proj: 'Console', pkgs: [svc, 'Looplex.OpenForExtension.Loader'] }
+          { proj: 'Plugin', pkgs: ['Looplex.OpenForExtension'] }
         ]
         packagesMap.forEach(({ proj, pkgs }) => {
           pkgs.forEach(pkg => {
-            execSync(`dotnet add ${proj}/${proj}.csproj package ${pkg}`, opts)
+            execSync(`dotnet add Plugin/Plugin.csproj package ${pkg}`, opts)
           })
         })
 
-        return `Created “${svc}.CLIApp @ “${dir}”.`
+        return `Created “${plg}” @ “${dir}”.`
       }
     ]
   }

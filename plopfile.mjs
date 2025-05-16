@@ -1,5 +1,7 @@
 import { exec } from 'node:child_process'
 
+import dotnetConsoleFactory from './factories/dotnet/console.mjs'
+import dotnetPluginFactory from './factories/dotnet/plugin.mjs'
 import dotnetServiceFactory from './factories/dotnet/service.mjs'
 import dotnetWebApiFactory from './factories/dotnet/webapi.mjs'
 
@@ -13,10 +15,13 @@ export default function (plop) {
   ▐▀▀▪▄▐█▐█• ▄█▀▄ ██▪  ▐█▐█•▐▀▀▪▄▐█· ▐█▌
   ▐█▄▄▌ ███ ▐█▌.▐▌▐█▌▐▌ ███ ▐█▄▄▌██. ██ 
   ▀▀▀ . ▀   ▀█▄▀▪.▀▀▀ . ▀   ▀▀▀ ▀▀▀▀▀• 
-  
-  What are we creating today?
-  `)
 
+  Generate:
+
+`)
+
+  plop.setGenerator('[dotnet] Console', dotnetConsoleFactory(plop))
+  plop.setGenerator('[dotnet] Plugin', dotnetPluginFactory(plop))
   plop.setGenerator('[dotnet] Service', dotnetServiceFactory(plop))
   plop.setGenerator('[dotnet] Web API', dotnetWebApiFactory(plop))
 }

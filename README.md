@@ -9,9 +9,11 @@
 [![Semantic Release](https://img.shields.io/badge/semantic-release-cb3837.svg?style=for-the-badge&logo=semantic-release)](https://semantic-release.gitbook.io/semantic-release/)
 
 # About
+
 `create-evolved` is a versatile project scaffolding CLI built with Plop.js and Node.js to accelerate the bootstrap of modern applications, services, and libraries by generating opinionated, best-practice project structures automatically. It combines interactive prompts, customizable Handlebars templates, and a plugin-style architecture to support a wide range of project types.
 
 # Requirements
+
 Before using `create-evolved`, ensure you have the following installed on your system:
 * **git** -- A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 * **dotnet** -- A cross-platform toolchain for developing, building, running, and publishing .NET applications; included with the .NET SDK.
@@ -35,14 +37,17 @@ Navigate to your `directory` and run the usual commands (`pnpm i`, `dotnet resto
 
 > **IMPORTANT:** When creating templates, one MUST follow our golden rule: use the most compatible syntax/runtime for services and the latest syntax/LTS for drivers. -- nagaozen
 
+* **.NET Console (net8.0)**  
+Opinionated .NET C# console app.
+
+* **.NET Plug-in (net8.0)**  
+Opinionated .NET C# open-for-extension plug-in.
+
 * **.NET Services (netstandard2.0)**  
-Opinionated C# service solution with clean-code architecture.
+Opinionated .NET C# service using clean-code architecture and open-for-extension.
 
 * **.NET WebAPI (net8.0)**  
-Opinionated C# minimal api solution.
-
-* **.NET Console (net8.0)**  
-Opinionated C# console solution.
+Opinionated .NET C# minimal web API.
 
 # Contributing
 
