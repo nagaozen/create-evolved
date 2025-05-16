@@ -58,7 +58,7 @@ function factory (plop) {
 
         // 6. Add NuGet dependencies
         const packagesMap = [
-          { proj: 'Application', pkgs: [] },
+          { proj: 'Application', pkgs: ['Casbin.NET'] },
           { proj: 'Application.Abstraction', pkgs: [] },
           { proj: 'Domain', pkgs: [] },
           { proj: 'Infra', pkgs: [] },
