@@ -1,3 +1,5 @@
+*.png binary
+
 # Logs
 logs
 *.log
