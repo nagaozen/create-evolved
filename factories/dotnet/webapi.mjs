@@ -4,7 +4,7 @@ import { execSync } from 'node:child_process'
 
 function factory (plop) {
   const interview = {
-    description: 'Generate a .NET minimal API solution',
+    description: '.NET C# minimal web API',
     prompts: [
       {
         type: 'input',
@@ -27,7 +27,6 @@ function factory (plop) {
         if (dir !== '.' && !fs.existsSync(dir)) {
           fs.mkdirSync(dir, { recursive: true })
         }
-
         const opts = { stdio: 'inherit', cwd: dir }
 
         // Create .gitignore and .editorconfig
@@ -45,7 +44,7 @@ function factory (plop) {
 
         // Add NuGet dependencies
         const packagesMap = [
-          { proj: 'WebAPI', pkgs: [] }
+          { proj: 'WebAPI', pkgs: [svc, 'Looplex.OpenForExtension.Loader'] }
         ]
         packagesMap.forEach(({ proj, pkgs }) => {
           pkgs.forEach(pkg => {
