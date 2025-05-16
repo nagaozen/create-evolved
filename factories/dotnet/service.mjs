@@ -4,7 +4,7 @@ import { execSync } from 'node:child_process'
 
 function factory (plop) {
   const interview = {
-    description: 'Generate a .NET service solution using onion architecture',
+    description: '.NET C# service using clean-code architecture and open-for-extension',
     prompts: [
       {
         type: 'input',
@@ -27,7 +27,6 @@ function factory (plop) {
         if (dir !== '.' && !fs.existsSync(dir)) {
           fs.mkdirSync(dir, { recursive: true })
         }
-
         const opts = { stdio: 'inherit', cwd: dir }
 
         // Create .gitignore and .editorconfig
@@ -62,9 +61,16 @@ function factory (plop) {
 
         // 6. Add NuGet dependencies
         const packagesMap = [
-          { proj: 'Application', pkgs: ['Casbin.NET'] },
+          {
+            proj: 'Application',
+            pkgs: [
+              'Casbin.NET',
+              'Looplex.OpenForExtension',
+              'MediatR'
+            ]
+          },
           { proj: 'Application.Abstraction', pkgs: [] },
-          { proj: 'Domain', pkgs: [] },
+          { proj: 'Domain', pkgs: ['PropertyChanged.Fody'] },
           { proj: 'Infra', pkgs: [] },
           { proj: 'Application.Tests', pkgs: [] }
         ]
